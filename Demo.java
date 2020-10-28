@@ -18,7 +18,8 @@ public class Demo{
         System.out.println(arrToString(a));
         int[][] b = {{1,2,3},{1,2,3}};
         System.out.println(arrayDeepToString(b));
-        System.out.println(create2DArray(2,3,4));
+        int[][] c = create2DArray(2,3,4);
+        System.out.println(arrayDeepToString(c));
     }
     public static String arrToString(int[] arr) {
       String Converted = "";
