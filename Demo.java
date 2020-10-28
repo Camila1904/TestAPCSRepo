@@ -14,5 +14,57 @@ public class Demo{
             }
             System.out.println();
         }
+        int[] a= {1,2,3,4};
+        System.out.println(arrToString(a));
     }
-}
+    public static String arrToString(int[] arr) {
+      String Converted = "";
+      for (int i=0; i<arr.length;i++) {
+        String x = "";
+        x= + arr[i] + "";
+        if (i != arr.length-1) {
+          Converted += x;
+          Converted += ", ";
+        }
+        else {
+          Converted += x;
+        }
+      }
+      Converted = "{" + Converted + "}";
+      return (Converted);
+    }
+    public static String arrayDeepToString (int[][] arr) {
+      String Convert = "";
+      if (arr.length == 0) {
+        return "{}";
+      }
+      for (int i=0; i < arr.length-1; i++) {
+        Convert = Convert + arrToString(arr[i]) + ", ";
+      }
+      Convert = "{" + Convert + arrToString(arr[arr.length-1]) + "}";
+      return Convert;
+    }
+    public static int[][] create2DArray (int rows, int cols, int maxValue) {
+      //  create2DArray will create and return an array of the size specified.
+      // It will also fill the array with values from 0 to maxValue inclusive.
+      int[][] arr = new int[rows][cols];
+      for (int i=0; i<arr.length;i++) {
+        for (int j=0; j<arr[i].length;j++) {
+          arr[i][j] = (int)(Math.random() * (maxValue+1));
+        }
+      }
+      return arr;
+    }
+    public static int[][] create2DArrayRandomized (int rows, int cols, int maxValue) {
+      int[][] arr = new int[rows][];
+      for (int i=0; i<rows;i++) {
+        arr[i] = new int[(int)(Math.random()*(cols+1))];
+      }
+      for (int i = 0; i<arr.length;i++) {
+        for (int j=0; j<arr[i].length;j++) {
+          arr[i][j] = (int)(Math.random()*(maxValue +1));
+        }
+      }
+      return arr;
+    }
+  }
