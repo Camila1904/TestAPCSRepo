@@ -16,6 +16,9 @@ public class Demo{
         }
         int[] a= {1,2,3,4};
         System.out.println(arrToString(a));
+        int[][] b = {{1,2,3},{1,2,3}};
+        System.out.println(arrayDeepToString(b));
+        System.out.println(create2DArray(2,3,4));
     }
     public static String arrToString(int[] arr) {
       String Converted = "";
