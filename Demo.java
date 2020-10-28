@@ -20,6 +20,8 @@ public class Demo{
         System.out.println(arrayDeepToString(b));
         int[][] c = create2DArray(2,3,4);
         System.out.println(arrayDeepToString(c));
+        int[][] d = create2DArrayRandomized(3,4,5);
+        System.out.println(arrayDeepToString(d));
     }
     public static String arrToString(int[] arr) {
       String Converted = "";
